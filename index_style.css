@@ -2,54 +2,61 @@
     font-familiy: verdana, helvetica, sans-serif, impact;
 }
 
-#container {
-    margin: 0 auto;
-    width: 100%;
-}
-
 #header {
-    background-color: #FFFFFF;
-}
-
-#title {
+  background-color: #FFFFFF;
   color: #000000;
   text-align: right;
-  font-size: larger;
+  font-size: 12px;
   font-family: impact;
 }
 
-.rslides {
-  position: relative;
-  list-style: none;
+#slider {
   overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  padding-top: 10px;
-  }
-
-.rslides li:first-child {
+}
+#slider figure {
   position: relative;
-  display: block;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 25s slider infinite;
+}
+#slider figure img {
+  width: 20%;
   float: left;
-  }
+}
 
-.rslides img {
-  display: block;
-  height: 850px;
-  float: left;
-  width: 100%;
-  border: 0;
+@keyframes slider {
+  0% {
+    left: 0;
   }
+  15% {
+    left: 0;
+  }
+  20% {
+    left: -100%;
+  }
+  30% {
+    left: -100%;
+  }
+  40% {
+    left: -200%;
+  }
+  50% {
+    left: -200%;
+  }
+  65% {
+    left: -300%;
+  }
+  70% {
+    left: -300%;
+  }
+  85% {
+    left: -400%;
+  }
+  100% {
+    left: 0;
+  }
+}
 
 #menu { 
     width: 100%;
@@ -74,18 +81,6 @@
 
 #menu a:hover{
     background-color: #CCCCCC;
-}
-
-#mainContainer {
-    width: 100%
-}
-
-#content {
-    text-align: center;
-    width: 100%;
-    color: #000000;
-    background-color: #FFFFFF;
-    padding: 20px;
 }
 
 #footer {
