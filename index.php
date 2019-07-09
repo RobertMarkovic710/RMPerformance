@@ -14,7 +14,7 @@
             <a href="#contact">Contact</a>
 
         <div class="login-container">
-            <form action="files/database_connect.php" method="POST">
+            <form action="" method="POST">
             <input type="text" name="username" placeholder="Username">
             <input type="text" name="password" placeholder="Password">
             <button type="submit">Login</button>
@@ -55,10 +55,7 @@
 </div> <!--end footer -->
 
 <?php 
-    if (isset($_POST['submit'])) {
-        include_once 'database_connect.php';
-
-    }
+    
 ?>
 
 </body>
