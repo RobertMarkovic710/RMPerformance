@@ -9,12 +9,33 @@ if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
+    
+
+    
+
     $sql = "INSERT INTO users (user_first, user_last, user_email, user_uid, user_pwd) VALUES ('$firstname', '$lastname', '$email', '$username', '$password')";
+    $stm = $conn->prepare($sql);
+    $stm->bindParam(':user_first', $firstname);
+    $stm->bindParam(':user_last', $lastname);
+    $stm->bindParam(':user_email', $email);
+    $stm->bindParam(':user_uid', $username);
+    $stm->bindParam(':user_pwd', $password);
 
-    // use exec() because no results are returned
-    $conn->exec($sql);
-
+    $stm->execute();
     echo "New record created successfully";
+}
+
+/*
+if ($conn) {
+        header("Location: ../signup.php");
+        echo "Thanks!";
     }
 
+
+    //ERROR HANDLERS:
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Email is invalid.";
+    }
+    else{}
+    */
 ?>

@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,10 +18,11 @@
             <a href="#contact">Contact</a>
 
         <div class="login-container">
-            <form action="" method="POST">
+            <form action="files/login_form.php" method="POST">
             <input type="text" name="username" placeholder="Username">
             <input type="text" name="password" placeholder="Password">
-            <button type="submit">Login</button>
+            <input type="submit" name="login" value="Login">
+            
             <a class="signUp" href="signup.php">Sign Up?</a>
             </form>
             
